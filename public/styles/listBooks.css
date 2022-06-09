@@ -1,0 +1,196 @@
+body {
+  width: 80%;
+  margin: auto;
+
+  max-width: 1440px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 0;
+}
+
+header h1 {
+  color: var(--white);
+}
+
+header a {
+  font-weight: 500;
+
+  color: var(--black);
+  background: var(--green);
+
+  padding: 0.8rem 2rem;
+
+  border-radius: 0.5rem;
+
+  border: 2px solid transparent;
+
+  transition: all 0.3s;
+}
+
+header a:hover,
+header a:focus {
+  color: var(--white);
+  background: transparent;
+
+  border: 2px solid var(--green);
+}
+
+main {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  margin: auto;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  width: 100%;
+
+  border-spacing: 0;
+
+  background: var(--white);
+}
+
+thead tr td {
+  padding: 1rem;
+
+  color: var(--black);
+
+  text-align: center;
+
+  font-weight: 600;
+}
+
+tbody tr {
+  width: 100%;
+  text-align: center;
+
+  transition: all 0.3s;
+}
+
+tbody tr .edit {
+  background: var(--yellow);
+
+  width: 60px;
+  height: 50px;
+
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s;
+}
+
+tbody tr .remove {
+  background: var(--red);
+
+  width: 60px;
+  height: 50px;
+
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s;
+}
+
+tbody tr .remove:hover,
+tbody tr .edit:hover {
+  filter: brightness(0.7);
+}
+
+tbody tr td {
+  padding: 1rem;
+  background: #f8f8f8;
+}
+
+/* modal */
+
+.modal {
+  display: none;
+
+  transition: all 0.7s;
+}
+
+.modal.active {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: var(--white);
+
+  padding: 2rem;
+
+  border-radius: 0.5rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.confirm {
+  background: var(--red);
+
+  padding: 0.5rem 1rem;
+
+  border: 1px solid transparent;
+
+  border-radius: 0.5rem;
+
+  color: var(--white);
+  font-weight: 600;
+
+  transition: all 0.3s;
+}
+
+.cancel {
+  background: var(--green);
+
+  padding: 0.5rem 1rem;
+
+  border: 1px solid transparent;
+
+  border-radius: 0.5rem;
+
+  color: var(--white);
+  font-weight: 600;
+
+  transition: all 0.3s;
+}
+
+.cancel:hover,
+.confirm:hover {
+  filter: brightness(0.7);
+}
