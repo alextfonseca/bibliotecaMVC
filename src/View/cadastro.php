@@ -1,17 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-</head>
-<body>
+<?php include 'inicio-html.php';
+
+$aviso = $_SESSION['aviso'];
+
+?>
+
+<div class="container">
+
     <form action="/cadastrar-usuario" method="POST">
-        <input type="text" name="nome" placeholder="nome">
-        <input type="text" name="email" placeholder="email">
-        <input type="text" name="senha" placeholder="senha">
-        <button type="submit">enviar</button>
+    <a class="arrowBackLink" href="/"
+        ><img src="/public/assets/arrowIcon.svg" alt="Ícone de uma seta"
+      /></a>
+
+        <h1>Criar conta</h1>
+        <p>Já tem uma conta ? <a href="/">Entrar</a></p>
+
+        <div class="inputGroup">
+        <label for="name">Nome</label>
+        <input type="text" name="nome" placeholder="Seu nome">
+        </div>
+
+        <div class="inputGroup">
+        <label for="email">E-mail</label>
+        <input type="text" name="email" placeholder="Seu e-mail">
+        </div>
+
+
+        <div class="inputGroup">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" placeholder="Crie sua senha">
+        </div>
+
+
+        <button type="submit">Criar conta</button>
     </form>
-</body>
-</html>
+</div>
+
+    <?php include 'fim-html.php' ?>

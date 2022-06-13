@@ -173,8 +173,8 @@ class ComposerStaticInit669ff68408ba8d0816a13396b93d6250
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
-            1 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
         ),
         'Biblioteca\\' => 
         array (

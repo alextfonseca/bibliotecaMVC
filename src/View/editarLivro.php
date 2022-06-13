@@ -1,30 +1,49 @@
 <?php 
 
 $id = $_GET['id'];
+$informacoes_livro = $_SESSION['informacoes-livro'];
+
+include 'inicio-html.php';
+
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar livro</title>
-</head>
-<body>
+<div class="container">
     <form action="/editar-livro-banco" method="POST">
-        <input type="text" name="nome" placeholder="Nome do livro">
-        <select name="categoria" id="categoria">
-            <option value="terror">Terror</option>
-            <option value="ciencia">Ciencia</option>
-            <option value="Infantil">Infantil</option>
-        </select>
+    <a class="arrowBackLink" href="/meus-livros"
+          ><img src="/public/assets/arrowIcon.svg" alt="Ícone de uma seta"
+        /></a>
 
-        <input type="text" name="autor" placeholder="Nome do autor">
+        <h1>Editar livro</h1>
+
+        <div class="inputGroup">
+        <label for="nome">Novo nome</label>
+            <input type="text" name="nome" placeholder="Nome do livro" value="<?= $informacoes_livro->getNome()  ?>">
+        </div>
+
+
+        <div class="inputGroup">
+        <label for="categoria">Nova categoria</label>
+            <select name="categoria" id="categoria" >
+            <option value="<?= $informacoes_livro->getCategoria()  ?>"><?= $informacoes_livro->getCategoria()  ?></option>
+            <option value="Ficção científica">Ficção científica</option>
+                <option value="Ação e aventura">Ação e aventura</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
+                <option value="Conto">Conto</option>
+                <option value="Infantil">Infantil</option>
+            </select>
+        </div>
+
+        <div class="inputGroup">
+        <label for="autor">Novo nome do autor</label>
+            <input type="text" name="autor" placeholder="Nome do autor" value="<?= $informacoes_livro->getAutor()  ?>">
+        </div>
 
         <input hidden type="number" name="id" value="<?= $id ?>">
-        <button type="submit">Salvar</button>
+
+
+        <button type="submit">Salvar alterações</button>
     </form>
-</body>
-</html>
+</div>
+
+<?php include 'fim-html.php' ?>

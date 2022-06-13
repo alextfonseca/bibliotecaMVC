@@ -23,7 +23,8 @@ class PersistenciaLivro implements InterfaceControladorRequisicao {
         $this->entityManager->persist($livro);
         $this->entityManager->flush();
 
-        header('Location: /home');
+
+        header('Location: /listar-livro');
         die;
     }
 } 

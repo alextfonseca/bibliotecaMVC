@@ -30,7 +30,11 @@ class Exclusao implements InterfaceControladorRequisicao
     );
     $this->entityManager->remove($livro);
     $this->entityManager->flush();
+
+    $_SESSION['sucesso'] = "Livro excluído com sucesso";
+
+
     header('Location: /listar-livro');
 
- }
+  }
 }

@@ -1,0 +1,33 @@
+.userCard {
+  background: var(--white);
+
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.userCard .buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.userCard .buttons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background: var(--green);
+
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+
+  font-weight: 600;
+
+  transition: all 0.5s;
+}
+
+.userCard .buttons a:hover {
+  filter: brightness(0.7);
+}

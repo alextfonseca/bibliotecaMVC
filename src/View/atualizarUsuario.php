@@ -1,21 +1,38 @@
 <?php 
+    include 'inicio-html.php';
+
     $usuario_logado = $_SESSION['usuario-logado'];
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar Usuario</title>
-</head>
-<body>
+<div class="container">
+
     <form action="/atualizar-usuario-banco" method="POST">
+
+    <a class="arrowBackLink" href="/home"
+          ><img src="/public/assets/arrowIcon.svg" alt="Ícone de uma seta"
+        /></a>
+
+        <h1>Alterar informações do perfil</h1>
+
+        <div class="inputGroup">
+        <label for="category">Nome</label>
         <input type="text" name="nome" placeholder="nome" value="<?= $usuario_logado->getNome() ?>">
+        </div>
+
+        <div class="inputGroup">
+        <label for="category">E-mail</label>
         <input type="text" name="email" placeholder="email" value="<?= $usuario_logado->getEmail() ?>">
-        <input type="text" name="senha" placeholder="senha">
-        <button type="submit">enviar</button>
+        </div>
+
+        <div class="inputGroup">
+        <label for="category">Senha</label>
+        <input type="password" name="senha" placeholder="senha">
+        </div>
+
+
+        <button type="submit">Salvar mudanças</button>
     </form>
-</body>
-</html>
+</div>
+
+<?php include 'fim-html.php' ?>

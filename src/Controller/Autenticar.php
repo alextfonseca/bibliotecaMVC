@@ -16,13 +16,20 @@ class Autenticar implements InterfaceControladorRequisicao {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
+        if($email === '' || $senha === ''){
+            $_SESSION['aviso'] = 'É necessário inserir e-mail e senha';
+
+            header('Location: /');
+        }
+
 
         $usuario = $this->usuarioRepositorio->findOneBy(array('email' => $email));
         if($usuario->verificarSenha($senha)) {
             $_SESSION['usuario-logado'] = $usuario;
             header('Location: /home');
         } else {
-            header('Location: /login');
+            $_SESSION['aviso'] = 'Usuário ou senha incorretos';
+            header('Location: /');
         }
     }
 } 

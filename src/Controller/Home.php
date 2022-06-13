@@ -10,7 +10,7 @@ class Home implements InterfaceControladorRequisicao {
         if(isset($_SESSION['usuario-logado'])) {
             require 'src/View/home.php';
         } else {
-            header('Location: /login');
+            header('Location: /');
         }
     }
 } 

@@ -29,6 +29,7 @@ class EditarLivroBanco implements InterfaceControladorRequisicao {
         $livro->setAutor($novo_autor);
 
         $_SESSION['livros-registrados'] = $livro;
+        $_SESSION['sucesso'] = 'Livro alterado com sucesso';
         $this->entityManager->flush();
 
         header('Location: /listar-livro');

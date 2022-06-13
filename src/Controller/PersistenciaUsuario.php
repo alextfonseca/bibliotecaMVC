@@ -23,7 +23,7 @@ class PersistenciaUsuario implements InterfaceControladorRequisicao {
         $this->entityManager->persist($usuario);
         $this->entityManager->flush();
 
-        header('Location: /login');
+        header('Location: /');
         die;
     }
 } 

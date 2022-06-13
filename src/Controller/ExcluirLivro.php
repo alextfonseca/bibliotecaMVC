@@ -2,13 +2,11 @@
 
 namespace Biblioteca\Controller;
 
-class Deslogar implements InterfaceControladorRequisicao {
+class ExcluirLIvro implements InterfaceControladorRequisicao {
     public function __construct(){
     }
 
     public function processaRequisicao(): void {
-        session_unset();
-        header('Location: /');
-        die;
+            require 'src/View/deletar.php';
     }
 } 

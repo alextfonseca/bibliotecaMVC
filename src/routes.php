@@ -15,13 +15,18 @@ use Biblioteca\Controller\AtualizarUsuarioBanco;
 use Biblioteca\Controller\EditarLivro;
 use Biblioteca\Controller\EditarLivroBanco;
 use Biblioteca\Controller\Exclusao;
+use Biblioteca\Controller\ExcluirLivro;
 
 return [
-    '/login' => Login::class,
+    '/' => Login::class,
     '/cadastrar' => Cadastro::class,
     '/cadastrar-novo-livro' => CadastroLivro::class,
+
+
     '/cadastrar-usuario' => PersistenciaUsuario::class,
     '/cadastrar-livro' => PersistenciaLivro::class,
+
+    
     '/autenticar' => Autenticar::class,
     '/listar-livro' => ListarLivros::class,
     '/home' => Home::class,
@@ -37,7 +42,8 @@ return [
     '/editar-livro-banco' => EditarLivroBanco::class,
 
 
-    '/excluir-livro' => Exclusao::class,
+    '/excluir' => Exclusao::class,
+    '/excluir-livro' => ExcluirLivro::class,
 
 
 ];
