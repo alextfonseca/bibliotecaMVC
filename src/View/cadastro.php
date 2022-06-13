@@ -15,6 +15,11 @@ $aviso = $_SESSION['aviso'];
         <p>Já tem uma conta ? <a href="/">Entrar</a></p>
 
         <div class="inputGroup">
+        <label for="imagem">Sua imagem de perfil</label>
+        <input type="file" name="imagem" placeholder="Sua imagem">
+        </div>
+
+        <div class="inputGroup">
         <label for="name">Nome</label>
         <input type="text" name="nome" placeholder="Seu nome">
         </div>

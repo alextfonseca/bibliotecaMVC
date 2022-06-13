@@ -1,6 +1,6 @@
 <?php 
     $usuario_logado = $_SESSION['usuario-logado'];
-    $sucesso = $_SESSION['sucesso'];
+    $sucesso = $_SESSION['sucesso-alteracao-usuario'];
 
     include 'inicio-html.php';
 ?>

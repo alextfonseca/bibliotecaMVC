@@ -1,10 +1,9 @@
 <?php 
     include 'inicio-html.php';
 
-    $sucesso = $_SESSION['sucesso'];
+    $sucesso = $_SESSION['sucesso-alteracao-livro'];
     $livros_registrados = $_SESSION['livros-registrados'];
 ?>
-
 
 
     <header>

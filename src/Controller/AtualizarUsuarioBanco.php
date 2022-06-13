@@ -30,7 +30,7 @@ class AtualizarUsuarioBanco implements InterfaceControladorRequisicao {
         $_SESSION['usuario-logado'] = $usuario;
         $this->entityManager->flush();
 
-        $_SESSION['sucesso'] = 'Usuário atualizado com sucesso';
+        $_SESSION['sucesso-alteracao-usuario'] = 'Usuário atualizado com sucesso';
 
         header('Location: /home');
         die;
